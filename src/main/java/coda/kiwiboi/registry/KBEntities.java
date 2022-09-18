@@ -9,7 +9,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class KBEntities {
-    public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITIES, KiwiBoi.MOD_ID);
+    public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, KiwiBoi.MOD_ID);
 
     public static final RegistryObject<EntityType<Kiwi>> KIWI = ENTITIES.register("kiwi", () -> EntityType.Builder.of(Kiwi::new, MobCategory.CREATURE).sized(0.5F, 0.7F).build(KiwiBoi.MOD_ID + "kiwi"));
 }
