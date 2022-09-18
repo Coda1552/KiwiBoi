@@ -14,7 +14,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.control.MoveControl;
 import net.minecraft.world.entity.ai.goal.BreedGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.FollowParentGoal;
@@ -41,7 +40,6 @@ public class Kiwi extends Animal implements IAnimatable {
 
     public Kiwi(EntityType<? extends Animal> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
-        this.moveControl = new KiwiMoveControl(this);
     }
 
     @Override
@@ -114,10 +112,9 @@ public class Kiwi extends Animal implements IAnimatable {
     }
 
     private PlayState predicate(AnimationEvent<?> e) {
-        if (isPartyKiwi()) {
+        if (isPartyKiwi() && !e.isMoving()) {
             e.getController().setAnimation(new AnimationBuilder().addAnimation("kiwi.dance", true));
         }
-
         else if (e.isMoving()) {
             e.getController().setAnimation(new AnimationBuilder().addAnimation("kiwi.walk", true));
         }
@@ -125,25 +122,13 @@ public class Kiwi extends Animal implements IAnimatable {
             e.getController().setAnimation(new AnimationBuilder().addAnimation("kiwi.idle", true));
         }
 
+        e.getController().setAnimationSpeed(2.0D);
+
         return PlayState.CONTINUE;
     }
 
     @Override
     public AnimationFactory getFactory() {
         return factory;
-    }
-
-    public class KiwiMoveControl extends MoveControl {
-
-        public KiwiMoveControl(Mob pMob) {
-            super(pMob);
-        }
-
-        @Override
-        public void tick() {
-            if (!((Kiwi)mob).isPartyKiwi()) {
-                super.tick();
-            }
-        }
     }
 }

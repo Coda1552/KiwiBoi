@@ -4,7 +4,6 @@ import coda.kiwiboi.client.model.KiwiModel;
 import coda.kiwiboi.common.entities.Kiwi;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.math.Vector3f;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -29,10 +28,6 @@ public class KiwiRenderer extends GeoEntityRenderer<Kiwi> {
 
         if (animatable.isBaby()) {
             stackIn.scale(0.5F, 0.5F, 0.5F);
-        }
-
-        if (animatable.isPartyKiwi()) {
-            stackIn.mulPose(Vector3f.YP.rotationDegrees(animatable.tickCount += 2));
         }
     }
 }
