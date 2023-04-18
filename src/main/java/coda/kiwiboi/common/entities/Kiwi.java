@@ -117,7 +117,7 @@ public class Kiwi extends Animal implements GeoEntity {
         if (isPartyKiwi() && !e.isMoving()) {
             e.setAnimation(RawAnimation.begin().thenLoop("dance"));
         }
-        if (e.isMoving()) {
+        else if (e.isMoving()) {
             e.setAnimation(RawAnimation.begin().thenLoop("walk"));
         }
         else {
