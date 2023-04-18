@@ -3,6 +3,7 @@ package coda.kiwiboi;
 import coda.kiwiboi.common.entities.Kiwi;
 import coda.kiwiboi.registry.KBEntities;
 import coda.kiwiboi.registry.KBItems;
+import coda.kiwiboi.registry.KBPaintings;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.SpawnPlacements;
@@ -24,6 +25,7 @@ public class KiwiBoi {
 
         KBItems.ITEMS.register(bus);
         KBEntities.ENTITIES.register(bus);
+        KBPaintings.PAINTINGS.register(bus);
 
         bus.addListener(this::registerAttributes);
     }
