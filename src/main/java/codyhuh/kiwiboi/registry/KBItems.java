@@ -1,8 +1,7 @@
-package coda.kiwiboi.registry;
+package codyhuh.kiwiboi.registry;
 
-import coda.kiwiboi.KiwiBoi;
+import codyhuh.kiwiboi.KiwiBoi;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.registries.DeferredRegister;

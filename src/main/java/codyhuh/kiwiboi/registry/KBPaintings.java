@@ -1,6 +1,6 @@
-package coda.kiwiboi.registry;
+package codyhuh.kiwiboi.registry;
 
-import coda.kiwiboi.KiwiBoi;
+import codyhuh.kiwiboi.KiwiBoi;
 import net.minecraft.world.entity.decoration.PaintingVariant;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;

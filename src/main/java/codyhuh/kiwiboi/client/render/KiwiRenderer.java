@@ -1,7 +1,7 @@
-package coda.kiwiboi.client.render;
+package codyhuh.kiwiboi.client.render;
 
-import coda.kiwiboi.KiwiBoi;
-import coda.kiwiboi.common.entities.Kiwi;
+import codyhuh.kiwiboi.KiwiBoi;
+import codyhuh.kiwiboi.common.entities.Kiwi;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;

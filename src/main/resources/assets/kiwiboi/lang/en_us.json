@@ -2,6 +2,9 @@
   "item.kiwiboi.kiwi_spawn_egg": "Kiwi Spawn Egg",
   "item.kiwiboi.kiwicake": "Kiwi Cake",
 
-  "entity.kiwiboi.kiwi": "Kiwi"
+  "entity.kiwiboi.kiwi": "Kiwi",
+
+  "painting.kiwiboi.weird_penguin.title": "Weird Penguin",
+  "painting.kiwiboi.weird_penguin.author": "OmayPaty"
 
 }

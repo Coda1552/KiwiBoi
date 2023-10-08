@@ -1,7 +1,7 @@
-package coda.kiwiboi.registry;
+package codyhuh.kiwiboi.registry;
 
-import coda.kiwiboi.KiwiBoi;
-import coda.kiwiboi.common.entities.Kiwi;
+import codyhuh.kiwiboi.KiwiBoi;
+import codyhuh.kiwiboi.common.entities.Kiwi;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.registries.DeferredRegister;

@@ -1,7 +1,7 @@
-package coda.kiwiboi.common.entities;
+package codyhuh.kiwiboi.common.entities;
 
-import coda.kiwiboi.registry.KBEntities;
-import coda.kiwiboi.registry.KBItems;
+import codyhuh.kiwiboi.registry.KBEntities;
+import codyhuh.kiwiboi.registry.KBItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
@@ -100,7 +100,7 @@ public class Kiwi extends Animal implements GeoEntity {
     }
 
     public void aiStep() {
-        if (this.jukebox == null || !this.jukebox.closerToCenterThan(this.position(), 3.46D) || !this.level.getBlockState(this.jukebox).is(Blocks.JUKEBOX)) {
+        if (this.jukebox == null || !this.jukebox.closerToCenterThan(this.position(), 3.46D) || !this.level().getBlockState(this.jukebox).is(Blocks.JUKEBOX)) {
             this.partyKiwi = false;
             this.jukebox = null;
         }
@@ -115,13 +115,13 @@ public class Kiwi extends Animal implements GeoEntity {
 
     private <T extends GeoAnimatable> PlayState predicate(AnimationState<T> e) {
         if (isPartyKiwi() && !e.isMoving()) {
-            e.setAnimation(RawAnimation.begin().thenLoop("dance"));
+            e.setAndContinue(RawAnimation.begin().thenLoop("dance"));
         }
         else if (e.isMoving()) {
-            e.setAnimation(RawAnimation.begin().thenLoop("walk"));
+            e.setAndContinue(RawAnimation.begin().thenLoop("walk"));
         }
         else {
-            e.setAnimation(RawAnimation.begin().thenLoop("idle"));
+            e.setAndContinue(RawAnimation.begin().thenLoop("idle"));
         }
 
         e.getController().setAnimationSpeed(2.0D);
