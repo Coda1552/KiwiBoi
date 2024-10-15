@@ -1,0 +1,41 @@
+{
+  "kiwi.ambient": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "kiwiboi:kiwi/ambient_1"
+      },
+      {
+        "name": "kiwiboi:kiwi/ambient_2"
+      },
+      {
+        "name": "kiwiboi:kiwi/ambient_3"
+      },
+      {
+        "name": "kiwiboi:kiwi/ambient_4"
+      }
+    ],
+    "subtitle": "subtitle.kiwiboi.kiwi_ambient"
+  },
+  "kiwi.hurt": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "kiwiboi:kiwi/hurt_1"
+      },
+      {
+        "name": "kiwiboi:kiwi/hurt_2"
+      }
+    ],
+    "subtitle": "subtitle.kiwiboi.kiwi_hurt"
+  },
+  "kiwi.death": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "kiwiboi:kiwi/death_1"
+      }
+    ],
+    "subtitle": "subtitle.kiwiboi.kiwi_death"
+  }
+}

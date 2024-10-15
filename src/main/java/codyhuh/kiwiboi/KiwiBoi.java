@@ -4,6 +4,7 @@ import codyhuh.kiwiboi.common.entities.Kiwi;
 import codyhuh.kiwiboi.registry.KBEntities;
 import codyhuh.kiwiboi.registry.KBItems;
 import codyhuh.kiwiboi.registry.KBPaintings;
+import codyhuh.kiwiboi.registry.KBSounds;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -23,6 +24,7 @@ public class KiwiBoi {
         KBItems.ITEMS.register(bus);
         KBEntities.ENTITIES.register(bus);
         KBPaintings.PAINTINGS.register(bus);
+        KBSounds.SOUNDS.register(bus);
 
         bus.addListener(this::registerAttributes);
         bus.addListener(this::populateTabs);

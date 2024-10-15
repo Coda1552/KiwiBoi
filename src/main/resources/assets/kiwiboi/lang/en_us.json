@@ -5,6 +5,9 @@
   "entity.kiwiboi.kiwi": "Kiwi",
 
   "painting.kiwiboi.weird_penguin.title": "Weird Penguin",
-  "painting.kiwiboi.weird_penguin.author": "OmayPaty"
+  "painting.kiwiboi.weird_penguin.author": "OmayPaty",
 
+  "subtitle.kiwiboi.kiwi_ambient": "Kiwi shrills",
+  "subtitle.kiwiboi.kiwi_hurt": "Kiwi hurts",
+  "subtitle.kiwiboi.kiwi_death": "Kiwi dies"
 }

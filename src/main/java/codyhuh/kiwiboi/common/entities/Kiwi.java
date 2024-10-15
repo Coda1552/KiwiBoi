@@ -2,6 +2,7 @@ package codyhuh.kiwiboi.common.entities;
 
 import codyhuh.kiwiboi.registry.KBEntities;
 import codyhuh.kiwiboi.registry.KBItems;
+import codyhuh.kiwiboi.registry.KBSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
@@ -75,19 +76,19 @@ public class Kiwi extends Animal implements GeoEntity {
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.PARROT_AMBIENT;
+        return KBSounds.KIWI_AMBIENT.get();
     }
 
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.PARROT_DEATH;
+        return KBSounds.KIWI_DEATH.get();
     }
 
     @Nullable
     @Override
     protected SoundEvent getHurtSound(DamageSource pDamageSource) {
-        return SoundEvents.PARROT_HURT;
+        return KBSounds.KIWI_HURT.get();
     }
 
     public void setRecordPlayingNearby(BlockPos pPos, boolean pIsPartying) {
